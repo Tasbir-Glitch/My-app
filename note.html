@@ -1,0 +1,70 @@
+<div class="page-title-area">
+    <h1 class="page-title">Note</h1>
+    <p>Explore app features</p>
+</div>
+<div class="main">
+    <div class="container"></div>
+</div>
+
+<script>
+    // Music player JS
+    const player = document.getElementById("player");
+    const playPauseButton = document.getElementById("music-play-pause");
+    const prevButton = document.getElementById("music-prev-btn");
+    const nextButton = document.getElementById("music-next-btn");
+    const title = document.getElementById("title");
+
+    let currentTrack = 0;
+    let tracks = [{
+            src: "assets/audios/punch2.mp3",
+            type: "audio/mp3",
+            title: "Track 1",
+        },
+        {
+            src: "assets/audios/punch-kicked.mp3",
+            type: "audio/mp3",
+            title: "Track 2",
+        },
+        {
+            src: "assets/audios/punch-mastered.mp3",
+            type: "audio/mp3",
+            title: "Track 3",
+        },
+    ];
+
+    playPauseButton.addEventListener("click", function () {
+        if (player.paused) {
+            player.play();
+            playPauseButton.innerHTML = "Pause";
+            title.innerHTML = "Now playing: " + tracks[currentTrack].title;
+        } else {
+            player.pause();
+            playPauseButton.innerHTML = "Play";
+            title.innerHTML = "Play Music:";
+        }
+    });
+
+    prevButton.addEventListener("click", function () {
+        currentTrack = currentTrack === 0 ? tracks.length - 1 : currentTrack - 1;
+        player.src = tracks[currentTrack].src;
+        player.type = tracks[currentTrack].type;
+        player.play();
+        title.innerHTML = "Now playing: " + tracks[currentTrack].title;
+    });
+
+    nextButton.addEventListener("click", function () {
+        currentTrack = currentTrack === tracks.length - 1 ? 0 : currentTrack + 1;
+        player.src = tracks[currentTrack].src;
+        player.type = tracks[currentTrack].type;
+        player.play();
+        title.innerHTML = "Now playing: " + tracks[currentTrack].title;
+    });
+
+    player.addEventListener("ended", function () {
+        currentTrack = currentTrack === tracks.length - 1 ? 0 : currentTrack;
+        player.src = tracks[currentTrack].src;
+        player.type = tracks[currentTrack].type;
+        player.play();
+        title.innerHTML = "Now playing: " + tracks[currentTrack].title;
+    });
+</script>

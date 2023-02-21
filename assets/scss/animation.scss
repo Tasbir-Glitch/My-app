@@ -1,0 +1,27 @@
+@keyframes bounce-drop{
+    0%{
+        transform: translateY(-110%);
+    }
+    60%{
+        transform: translateY(-10%);
+    }
+    70%{
+        transform: translateY(-13%);
+    }
+    100%{
+        transform: translateY(-10%);
+    }
+}
+
+@keyframes equal-breathing{
+    0%{
+        width: 50%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+

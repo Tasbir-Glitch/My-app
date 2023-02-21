@@ -1,0 +1,16 @@
+<div id="myDiv" style="position: absolute; top: 50px; left: 50px; width: 200px; height: 100px; background-color: blue;">
+</div>
+
+<script>
+    let myDiv = document.getElementById("myDiv");
+let startY, startHeight;
+
+myDiv.addEventListener("mousedown", function(event) {
+  let rect = myDiv.getBoundingClientRect();
+  if (event.clientY - rect.top < 10) {
+    startY = event.clientY;
+    startHeight = parseInt(getComputedStyle(myDiv).height);
+  }
+});
+
+</script>

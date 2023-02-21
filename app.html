@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My app</title>
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+
+<body>
+    <div class="mobile-first">
+        <div class="topbar">
+            <div class="topbar-inner">
+                <div class="top-user">
+                    <div class="user-icon"><img src="assets/images/icon/tasbir.jpg" alt="user-icon"></div>
+                </div>
+                <div class="music-btn">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18 3.51228C18 1.36012 16.0333 -0.285662 13.8526 0.0415859L7.55262 0.987003C5.7964 1.25054 4.5 2.72451 4.5 4.45769V12.1505C4.09083 11.961 3.63312 11.8548 3.15 11.8548C1.4103 11.8548 0 13.2305 0 14.9274C0 16.6244 1.4103 18 3.15 18C4.88966 18 6.29995 16.6244 6.3 14.9275V4.45769C6.3 3.5911 6.9482 2.85412 7.82631 2.72235L14.1263 1.77694C15.2167 1.61331 16.2 2.4362 16.2 3.51228V9.51685C15.7909 9.32732 15.3331 9.22118 14.85 9.22118C13.1103 9.22118 11.7 10.5968 11.7 12.2938C11.7 13.9907 13.1103 15.3664 14.85 15.3664C16.5897 15.3664 17.9999 13.9908 18 12.2939V3.51228ZM16.2 12.2938C16.2 11.5665 15.5956 10.9769 14.85 10.9769C14.1044 10.9769 13.5 11.5665 13.5 12.2938C13.5 13.021 14.1044 13.6106 14.85 13.6106C15.5956 13.6106 16.1999 13.021 16.2 12.2938ZM4.5 14.9274C4.5 14.2002 3.89559 13.6106 3.15 13.6106C2.40441 13.6106 1.8 14.2002 1.8 14.9274C1.8 15.6547 2.40441 16.2442 3.15 16.2442C3.89555 16.2442 4.49995 15.6547 4.5 14.9274Z"
+                            fill="#00BBBB" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="music-bar">
+            <div class="music-bar-inner">
+                <audio id="player">
+                    <source src="assets/audios/punch2.mp3" type="audio/mp3">
+                    <source src="assets/audios/punch-kicked.mp3" type="audio/mp3">
+                    <source src="assets/audios/punch-mastered.mp3" type="audio/mp3">
+                </audio>
+                <div class="bock-wrapper">
+                    <p id="track-title">Play Music</p>
+                    <div id="controls">
+                        <button id="music-prev-btn"><img src="assets/images/icon/previousM.svg" alt="micon"></button>
+                        <button id="music-play-pause"><img src="assets/images/icon/play.svg" alt="micon"></button>
+                        <button id="music-next-btn"><img src="assets/images/icon/nextM.svg" alt="micon"></button>
+                        <div class="volume-area">
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                            <div class="volume-btn"><img src="assets/images/icon/volume.svg" alt="micon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="music-bar-close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="44"
+                    height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <polyline points="6 15 12 9 18 15" />
+                </svg>
+            </button>
+        </div>
+        <div id="single-page2" class="single-page rlx-pg">
+            <div class="page-title-area">
+                <h1 class="page-title">Relax</h1>
+                <p>Explore app features</p>
+            </div>
+            <div class="main">
+                <div class="main-swipe"></div>
+                <div class="container">
+                    <div class="breather">
+                        <div class="breather-heart"></div>
+                        <div class="breathe-out-range"></div>
+                        <h2 class="breathe-text">Tap to Start</h2>
+                        <h2 class="breathe-countdown-text">3</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="single-page3" class="single-page hbt-pg hide">
+            <div class="page-title-area">
+                <h1 class="page-title">Habbit</h1>
+                <p>Explore app features</p>
+            </div>
+            <div class="main">
+                <div class="container">
+                    3
+                </div>
+            </div>
+        </div>
+        <div id="single-page4" class="single-page nt-pg hide">
+            <div class="page-title-area">
+                <h1 class="page-title">Journal</h1>
+                <p>Explore app features</p>
+            </div>
+            <div class="main">
+                <div class="container"></div>
+            </div>
+        </div>
+        <div class="navigation-area">
+            <div class="navigation-bar mobile-navbar">
+                <div class="navbar-inner">
+                    <ul class="navigation-ul">
+                        <li><a class="nav-item" href="#" onclick="loadPage('note.html')" data-show=".nt-pg">
+                                <svg class="navsvg4" width="19" height="20" viewBox="0 0 19 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.8 4.54544C3.8 4.04337 4.22534 3.63635 4.75 3.63635H14.25C14.7747 3.63635 15.2 4.04337 15.2 4.54544C15.2 5.04752 14.7747 5.45453 14.25 5.45453H4.75C4.22533 5.45453 3.8 5.04752 3.8 4.54544Z"
+                                        fill="" />
+                                    <path
+                                        d="M3.8 8.1818C3.8 7.67971 4.22534 7.27271 4.75 7.27271H14.25C14.7747 7.27271 15.2 7.67971 15.2 8.1818C15.2 8.68389 14.7747 9.09089 14.25 9.09089H4.75C4.22533 9.09089 3.8 8.68389 3.8 8.1818Z"
+                                        fill="" />
+                                    <path
+                                        d="M4.75 10.9091C4.22534 10.9091 3.8 11.3161 3.8 11.8182C3.8 12.3203 4.22533 12.7273 4.75 12.7273H14.25C14.7747 12.7273 15.2 12.3203 15.2 11.8182C15.2 11.3161 14.7747 10.9091 14.25 10.9091H4.75Z"
+                                        fill="" />
+                                    <path
+                                        d="M3.8 15.4546C3.8 14.9525 4.22534 14.5455 4.75 14.5455H8.55C9.07469 14.5455 9.5 14.9525 9.5 15.4546C9.5 15.9567 9.07469 16.3637 8.55 16.3637H4.75C4.22534 16.3637 3.8 15.9567 3.8 15.4546Z"
+                                        fill="" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 2.72727C0 1.22105 1.27599 0 2.85 0H16.15C17.7241 0 19 1.22105 19 2.72727V17.2727C19 18.779 17.7241 20 16.15 20H2.85C1.27599 20 0 18.779 0 17.2727V2.72727ZM2.85 1.81818H16.15C16.6747 1.81818 17.1 2.22519 17.1 2.72727V17.2727C17.1 17.7748 16.6747 18.1818 16.15 18.1818H2.85C2.32533 18.1818 1.9 17.7748 1.9 17.2727V2.72727C1.9 2.2252 2.32532 1.81818 2.85 1.81818Z"
+                                        fill="" />
+                                </svg>
+                                <span>Journal</span>
+                            </a></li>
+                        <li class="nav-active"><a class="nav-item" href="#" onclick="loadPage('relax.html')"
+                                data-show=".rlx-pg">
+                                <svg class="navsvg2" width="21" height="23" viewBox="0 0 21 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.61594 21.3177C3.17753 16.1067 5.42391 12.0538 10.4783 9.73782" stroke=""
+                                        stroke-width="2.38333" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M7.10869 17.8438C14.0927 17.8438 18.9022 14.0363 19.4638 3.94793V1.63196H14.9553C4.84659 1.63196 1.49275 6.2639 1.47703 12.0538C1.47703 13.2118 1.47703 15.5278 3.7234 17.8438H7.09297H7.10869Z"
+                                        stroke="" stroke-width="2.38333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Relax</span>
+                            </a></li>
+                        <li><a class="nav-item" href="#0" data-show=".hbt-pg">
+                                <svg class="navsvg3" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 3.07693H20V9.23078H18V3.07693Z" fill="" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11 15.2564C13.8528 14.6624 16.25 12.0756 16.25 8.97436V0H3.75V8.97436C3.75 12.0756 6.1472 14.7906 9 15.3846V17.9487H6.25V20H13.75V17.9487H11V15.2564ZM5.68997 2.05128H10H14.5V5.1282V8.97436C13.75 11.5 12.0711 13 10 13C7.92887 13 6 10.5 5.68997 8.97436V2.05128Z"
+                                        fill="" />
+                                    <path d="M2 3.07693H0V9.23078H2V3.07693Z" fill="" />
+                                </svg>
+                                <span>Habbit</span>
+                            </a></li>
+                        <div class="indicator"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/vendors/jquery-3.6.0.min.js"></script>
+    <script src="assets/main.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
